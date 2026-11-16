@@ -50,8 +50,8 @@ input[name="quantity"]{max-width:4.5em}
 .sales-table{min-width:312px}.sales-table .sale-row-label,.sales-table .buyer-name,.sales-table .sale-count{font-size:14px;font-weight:700}.sales-table th:nth-child(1){width:64px}.sales-table th:nth-child(2){width:60px}.sales-table th:nth-child(4){width:28px}.sales-table th:nth-child(7){min-width:0;width:auto}.sales-table .sale-memo{overflow:hidden;text-overflow:ellipsis}.sales-table .buyer-line small{font-size:9px}.sales-table .sale-row-label{gap:2px}
 @media(min-width:768px){.sales-table th:nth-child(3){width:220px}.sales-table .sale-product{white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:anywhere;font-size:14px;line-height:1.5}}
 .sales-summary{display:flex;align-items:center;justify-content:flex-end;gap:8px;font-size:12px}.sales-month{display:flex;align-items:center;gap:4px;font-size:12px}.sales-month select{width:auto;margin:0;min-height:34px;padding:5px 24px 5px 7px;font-size:13px}@media(max-width:520px){.sales-list-heading{align-items:flex-start;white-space:normal}.sales-summary{gap:5px;flex-wrap:wrap;justify-content:flex-end}.sales-month{white-space:nowrap}}
-/* iPhone Safari gives date fields a larger intrinsic width. Reserve it first. */
-@media(max-width:420px){.datebar{display:grid;grid-template-columns:38px minmax(0,1fr) 38px;gap:4px}.datebar button{width:38px;min-width:38px;padding:6px 0}.datebar label{min-width:0;width:100%}.datebar input[type="date"]{width:100%;min-width:0;padding:7px 2px;font-size:14px}.datebar #dateLabel{font-size:12px;white-space:nowrap}}
+/* Give Safari's date control a full row in the sales editor. */
+@media(max-width:420px){#salesDialog .grid>label:first-child{grid-column:1/-1}#salesDialog input[type="date"]{width:100%;min-width:0;padding:8px 4px;font-size:15px}.sales-table th:nth-child(1){width:70px}}
 </style>
 <header><div><h1>愛幸園の飼育日誌</h1></div></header>
 <main><div class="notice">端末内保存モード</div>
